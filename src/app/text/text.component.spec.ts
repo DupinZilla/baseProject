@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TextComponent } from './text.component';
+import { ImageLoaderService } from '../services/image-loader/image-loader.service';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('TextComponent', () => {
   let component: TextComponent;
@@ -8,7 +10,13 @@ describe('TextComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TextComponent ]
+      imports: [
+        HttpClientModule
+      ],
+      declarations: [ TextComponent ],
+      providers: [
+        ImageLoaderService
+      ]
     })
     .compileComponents();
   }));
