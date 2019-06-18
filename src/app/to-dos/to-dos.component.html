@@ -1,0 +1,15 @@
+  <input [(ngModel)]="item" placeholder="Digite uma tarefa" name="input" />
+  <button (click)="onSubmit()" type="submit">Adicionar tarefa</button>
+
+  <div>
+    <ul>
+      <li *ngFor="let itemList of toDoList; let i=index">
+        <input type="checkbox" [(ngModel)]="itemList.isChecked"/> 
+        {{itemList.tarefa}}   
+        <span (click)="deleteItem(i)">[X]</span>
+      </li>
+    </ul>
+
+    <button (click)="deleteMultipleItens()">Deletar tarefas <br> selecionadas</button>
+
+  </div>

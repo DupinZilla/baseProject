@@ -6,17 +6,21 @@ import { AppBaseComponent } from './base/base.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ComponentClassModule } from './component-class/component-class.module';
 import { ServiceClassModule } from './service-class/service-class.module';
+import { ToDosComponent } from './to-dos/to-dos.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppBaseComponent,
     NotFoundComponent,
+    ToDosComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ComponentClassModule,
-    ServiceClassModule
+    ServiceClassModule,
+    FormsModule
   ],
   bootstrap: [AppBaseComponent]
 })

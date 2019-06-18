@@ -18,6 +18,10 @@ export class TextComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+   this.onNewImage();
+  }
+
+  onNewImage() {
     this.servico.getImage().subscribe(
 
       (coisas) => {
@@ -26,4 +30,5 @@ export class TextComponent implements OnInit {
 
     );
   }
+
 }

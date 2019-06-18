@@ -17,7 +17,17 @@ export class TextComponent implements OnInit {
     public servico: ImageLoaderService
   ) {}
 
+
+  newImage() {
+    this.changeImage();
+
+  }
+
   ngOnInit() {
+  this.changeImage();
+  }
+
+  changeImage(){
     this.servico.getImage().subscribe(
 
       (coisas) => {
@@ -26,4 +36,5 @@ export class TextComponent implements OnInit {
 
     );
   }
+
 }
