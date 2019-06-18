@@ -7,17 +7,21 @@ import { ImageLoaderService } from '../services/image-loader/image-loader.servic
 import { HttpClient } from 'selenium-webdriver/http';
 import { HttpClientTestingModule } from '@angular/common/http/testing'
 import { HttpClientModule } from '@angular/common/http';
+import { TodosComponent } from '../todos/todos.component';
+import { FormsModule } from '@angular/forms';
 describe('AppBaseComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        HttpClientModule
+        HttpClientModule,
+        FormsModule
       ],
       declarations: [
         AppBaseComponent,
         AccessibilityComponent,
-        TextComponent
+        TextComponent,
+        TodosComponent
       ],
       providers: [
         ImageLoaderService
