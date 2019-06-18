@@ -19,4 +19,18 @@ export class AppBaseComponent {
   onFontChanged(font) {
     this.fontSize = font;
   }
+
+  plus( a: any, b: any ){
+    return a + b;
+  }
+
+  isEvenOrOdd(num){
+    if (num % 2){
+      return 'odd';
+    } else {
+      return 'even';
+    }
+  }
+
+
 }

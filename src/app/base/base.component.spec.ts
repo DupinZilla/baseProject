@@ -47,4 +47,39 @@ describe('AppBaseComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Bem-vindas! Academia Angula');
   });
+
+  it('should test pegaCor()', () => {
+    const fixture = TestBed.createComponent(AppBaseComponent);
+    const app = fixture.debugElement.componentInstance;
+    app.pegaCor('blue');
+    expect(app.minhaCor).toEqual('blue');
+  });
+
+  it('should test plus()', () => {
+    const fixture = TestBed.createComponent(AppBaseComponent);
+    const app = fixture.debugElement.componentInstance;
+    const result = app.plus(2,2);
+    expect(result).toEqual(4);
+  });
+
+
+  it('should test isEvenOrOdd()', () => {
+    const fixture = TestBed.createComponent(AppBaseComponent);
+    const app = fixture.debugElement.componentInstance;
+    const result = app.isEvenOrOdd(3);
+    expect(result).toEqual('odd');
+  });
+
+
+  it('should test isEvenOrOdd()', () => {
+    const fixture = TestBed.createComponent(AppBaseComponent);
+    const app = fixture.debugElement.componentInstance;
+    const result = app.isEvenOrOdd(2);
+    expect(result).toEqual('even');
+  });
+
+
+
+
+
 });
