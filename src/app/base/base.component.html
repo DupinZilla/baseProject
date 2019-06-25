@@ -1,5 +1,12 @@
-<div style="text-align:center">
-  <h1>
-    Bem-vindas! Academia Angular
-  </h1>
+<div style="text-align:center; color: #a66a6a">
+  <h1>Bem-vindas! <br> {{title}}</h1>
 </div>
+
+<div class="navegacao">
+  <a class="link" routerLink="/components">Componentes</a>
+  <a class="link"  routerLink="/services">Serviços</a>
+  <a class="link" routerLink="/ToDos">ToDos</a>
+  <button class="botao" (click)="navigateTo(['books'])">Livros</button>
+</div>
+
+<router-outlet></router-outlet>

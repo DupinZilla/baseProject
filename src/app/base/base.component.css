@@ -1,0 +1,38 @@
+*{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.navegacao {
+  text-align: center;
+  background-color: rosybrown;
+  padding: 10px 0 10px 0;
+  text-transform: uppercase;
+}
+
+.link {
+  padding: 20px;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.botao {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: whitesmoke;
+  padding: 2px 5px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  background-color: #a66a6a;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 3px gray;
+}
+
+.botao:hover {background-color: #a66a6a}
+
+.botao:active {
+  background-color: #a66a6a;
+  box-shadow: 0 2px gray;
+  transform: translateY(4px);
+}

@@ -1,0 +1,16 @@
+<div class="formularioToDo">
+  <h1 class="toDoTitle">ToDo List </h1>
+
+  <p class="toDoSubTitle">Liste suas tarefas abaixo</p>
+    <input [(ngModel)]="item" placeholder="Digite uma tarefa:" name="input"/>
+    <button (click)="OnSubmit()" type="submit">Adicionar tarefa</button>
+
+    <div class="cardToDo">
+      <ul>
+        <li class="itemAdicionado" *ngFor="let itemList of toDoList; let i = index"><input type="checkbox" [(ngModel)]="itemList.isChecked">{{itemList.tarefa}}
+          <span (click)="deleteItem(itemList)">[x]</span>
+        </li>
+      </ul>
+      <button (click)="deleteMultipleItens()">Deletar selecionados</button>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-base',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./base.component.css']
 })
 export class AppBaseComponent {
-  title = 'project-base';
+  title = 'Academia Angular';
+
+  constructor(private router: Router) { }
+
+  navigateTo(path: string[]) {
+    this.router.navigate(path);
+  }
 }

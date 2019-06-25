@@ -1,0 +1,22 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.formularioToDo {
+  text-align: center;
+  padding: 30px 0 30px 0;
+  background-color: antiquewhite;
+}
+
+.toDoTitle {
+  color: brown;
+}
+
+.toDoSubTitle {
+  color: darkred;
+}
+
+.itemAdicionado {
+  list-style: none;
+  color: grey;
+}

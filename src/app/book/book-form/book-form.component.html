@@ -1,0 +1,29 @@
+<form class="formulario" (ngSubmit)="onSubmit(bookForm, $event)" #bookForm="ngForm">
+  <div>
+    <label for="title">Título</label>
+    <input type="text" [(ngModel)]="book.title" id="title" #title="ngModel" name="title" required />
+    <span *ngIf="title.touched && !title.valid">Informe um Título</span>
+  </div>
+  <div>
+    <label for="author">Autor</label>
+    <input type="text" [(ngModel)]="book.author" id="author" #author="ngModel" name="author" required />
+    <span *ngIf="author.touched && !author.valid">Informe um Autor</span>
+  </div>
+  <div>
+    <label for="publisher">Editora</label>
+    <input type="text" [(ngModel)]="book.publisher" id="publisher" #publisher="ngModel" name="publisher" required />
+    <span *ngIf="publisher.touched && !publisher.valid">Informe uma Editora</span>
+  </div>
+  <div>
+    <label for="releaseDate">Data de Lançamento</label>
+    <input type="date" [(ngModel)]="book.releaseDate" id="releaseDate" #releaseDate="ngModel" name="releaseDate" required />
+    <span *ngIf="releaseDate.touched && !releaseDate.valid">Informe uma Data de Lançamento</span>
+  </div>
+  <div>
+    <label for="value">Valor</label>
+    <input type="number" [(ngModel)]="book.value" id="value" #value="ngModel" name="value" required />
+    <span *ngIf="value.touched && !value.valid">Informe um Valor</span>
+  </div>
+
+  <button type="submit" [disabled]="!bookForm.form.valid">Adicionar</button>
+</form>

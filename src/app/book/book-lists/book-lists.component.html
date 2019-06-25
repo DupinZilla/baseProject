@@ -1,0 +1,22 @@
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Valor</th>
+        <th><a routerLink="/book/new"></a>Novo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng*For="let book of books">
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.value}}</td>
+        <td><a routerLink="/books/{{book.id}}/detail">Ver</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<router-outlet></router-outlet>
